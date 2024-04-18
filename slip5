@@ -1,0 +1,31 @@
+//write a programt to perform the following poerations on tow string using standard library function:
+a. copy    b. compare
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+   char s1[20],s2[20];
+   int ch,k;
+   printf("enter string1");
+   gets(s1);
+   printf("enter string2");
+   gets(s2);
+   printf("\n 1-copy\n 2-compare \n enter choice");
+   scanf("%d",&ch);
+   switch(ch)
+   {
+   case 1:strcpy(s1,s2);
+          printf("\n first string=%s",s1);
+          printf("\n second string=%s",s2);
+          break;
+   case 2:k=strcmp(s1,s2);
+         if(k==0)
+         printf("string are same");
+         if(k>0)
+         printf("string1 greater");
+         if(k<0) 
+         printf("string2 greater");
+         break;
+         default:printf("invalid choice");      
+   }
+}
