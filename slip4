@@ -1,0 +1,35 @@
+//Write a program to read the contents of a text file and count the number of
+//characters, lines and words in the file ..
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+     FILE *f1;
+     int i;
+     char ch,c1,c2,c3;
+     f1=fopen("student.text","r");
+     if(f1==NULL)
+     {
+           printf("file not found");
+           exit(0);
+     }
+     while(!feof(f1))
+     {
+           ch=fgetc(f1);
+           if(isalpha(ch))
+           {
+              c1++;
+           }
+           else if(ch=='\n')
+          {
+             c2++;
+          }
+           else if("")
+           {
+                c3++;
+           }
+     }
+     printf("\n character count:%d\n",c1);
+     printf("\n line count:%d\n",c2);
+     printf("\n word count:%d\n",c3);
+}
