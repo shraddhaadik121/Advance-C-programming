@@ -1,0 +1,31 @@
+//write aprogram to declare a structure person (name,address) which contains another structure brithdate (day,month,year).accept the details of n persons and display them.....
+#include<stdio.h>
+struct person
+{
+       char name[20],address[20];
+       struct bdate
+       {
+             int dd,mm,yy;
+       }d;
+}p[10];
+int main()
+{
+      int n,i;
+      printf("enter limit:");
+      scanf("%d",&n);
+      for(i=0;i<n;i++)
+      {
+           printf("enter name");
+           scanf("%s",p[i].name);
+           printf("enter address");
+           scanf("%s",p[i].address);
+           printf("enter brithdate");
+           scanf("%d%d%d",&p[i].d.dd,&p[i].d.mm,&p[i].d.yy);
+      }
+      for(i=0;i<n;i++)
+      {
+              printf("name:%s\n",p[i].name);
+              printf("address:%s\n",p[i].address);
+              printf("brithdate:%d%d%d\n",p[i].d.dd,p[i].d.mm,p[i].d.yy);
+      }
+}
